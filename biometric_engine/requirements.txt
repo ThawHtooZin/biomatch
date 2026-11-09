@@ -1,0 +1,8 @@
+deepface[tensorflow]
+tf-keras
+opencv-python<5
+Flask
+numpy
+python-dotenv>=1.0,<2
+psycopg[binary]>=3.2,<4
+pgvector>=0.3,<1

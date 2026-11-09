@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+button,
+a[href] {
+	transition: transform 120ms ease, filter 120ms ease;
+}
+
+button:not(:disabled):active,
+a[href]:active {
+	transform: scale(0.98);
+}
+
+@keyframes biometric-scan {
+	0% { top: 0%; opacity: 0; }
+	8% { opacity: 1; }
+	92% { opacity: 1; }
+	100% { top: 100%; opacity: 0; }
+}
+
+.biometric-scan-line {
+	animation: biometric-scan 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	button,
+	a[href] {
+		transition-duration: 0.01ms;
+	}
+
+	.biometric-scan-line {
+		animation: none;
+	}
+}
